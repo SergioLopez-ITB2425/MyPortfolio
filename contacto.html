@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <title>Contact Form</title>
+    <style>
+        input:not(:placeholder-shown):invalid {
+            background-color: pink;
+            box-shadow: 0 0 0 2px red;
+        }
+    </style>
+</head>
+
+<header>
+    <nav>
+        <a href="./index.html" class="brand">ASIX1A</a>
+        <div class="menu">
+            <div class="menu-icon" onclick="toggleMenu()">MENU</div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <a href="./index.html">Home</a>
+            <a href="./proyecto1.html">Proyecto 1</a>
+            <a href="./proyecto2.html">Proyecto 2</a>
+            <a href="./proyecto3.html">Proyecto 3</a>
+            <a href="./proyecto4.html">Proyecto 5</a>
+            <a href="./contacto.html">Contáctanos</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="contact-container">
+        <!-- Api Web3Forms-->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Contáctanos</h2>
+                <hr>
+            </div>
+            <!-- in value put you Access Key of Web3Forms -->
+            <input type="hidden" name="access_key" value="a588ad3c-1e0c-48d4-b7ad-3bfbe8024576">
+            <input type="text" name="name" placeholder="Nombre" class="contact-inputs" required>
+
+            <!-- Aquí está el campo de email con los atributos y validación -->
+            <input type="email" name="email" lang="en" maxlength="254" value="" placeholder="example@domain.com"
+                autocapitalize="off" spellcheck="false" autocorrect="off" autocomplete="on" required=""
+                inputmode="email"
+                pattern="(?![_.-])((?![_.-][_.-])[a-zA-Z\d_.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
+                class="contact-inputs">
+
+            <textarea name="message" placeholder="Mensaje" class="contact-inputs" required></textarea>
+            <button type="submit">Enviar<img src="img/arrow_icon.png" alt="this is the submit icon"></button>
+        </form>
+        <div class="contact-right">
+            <img src="img/contacto.webp" alt="img right background">
+        </div>
+    </div>
+    <script src="archivo.js"></script>
+</body>
+
+</html>
+
+<!-- prueba -->
