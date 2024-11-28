@@ -270,24 +270,43 @@ main {
 
 /* prueba */
 
-/* General adjustments for responsiveness */
-@media (max-width: 1200px) {
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
     .hero {
-        height: 15vh;
-        padding-left: 50px;
+        height: 30vh; /* Ajustamos la altura para que no quede demasiado pequeño */
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 
     .brand {
         font-size: 1.2em;
-        margin-left: 50px;
+        margin-left: 0;
     }
 
     .menu-icon {
-        margin-right: 100px;
+        margin-right: 0;
     }
 
     .sidebar {
-        width: 250px;
+        width: 100%;
+        right: -100%;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    main {
+        padding: 20px;
     }
 
     .project-section h2 {
@@ -295,70 +314,16 @@ main {
     }
 
     .project-section p {
-        font-size: 1.1rem;
-    }
-
-    .project-details img {
-        width: 90%;
-        max-width: 500px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-about,
-    .footer-contact,
-    .footer-follow {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    .project-details ul li {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        height: 20vh;
-        padding-left: 20px;
-    }
-
-    .brand {
-        font-size: 1.1em;
-        margin-left: 20px;
-    }
-
-    .menu-icon {
-        margin-right: 50px;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    .main {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .project-section h2 {
-        font-size: 1.6rem;
-    }
-
-    .project-section p {
         font-size: 1rem;
     }
 
     .project-details img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .footer-container {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
 
     .footer-about,
@@ -367,81 +332,68 @@ main {
         flex: 1 1 100%;
     }
 
-    .project-links h3 {
-        font-size: 1.3rem;
-    }
-
-    .project-links .project-button {
-        font-size: 0.9rem;
-    }
-
     .footer-bottom {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 }
 
-@media (max-width: 480px) {
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
     .hero {
-        height: 30vh;
-        padding-left: 10px;
-    }
-
-    .brand {
-        font-size: 1em;
-        margin-left: 10px;
-    }
-
-    .menu-icon {
-        margin-right: 10px;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    .main {
-        padding: 10px;
-        gap: 15px;
+        height: 40vh;
+        padding-left: 50px;
     }
 
     .project-section h2 {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .project-section p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .project-details img {
-        width: 100%;
+        max-width: 80%;
     }
 
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .footer-about,
     .footer-contact,
     .footer-follow {
-        flex: 1 1 100%;
+        flex: 1 1 30%;
+    }
+}
+
+/* Para pantallas grandes (pantallas de escritorio) */
+@media (min-width: 1025px) {
+    .hero {
+        height: 10vh;
+        padding-left: 100px;
     }
 
-    .footer-about h3,
-    .footer-contact h3,
-    .footer-follow h3 {
+    .project-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-section p {
         font-size: 1.2rem;
     }
 
-    .project-links h3 {
-        font-size: 1.2rem;
+    .project-details img {
+        max-width: 600px;
     }
 
-    .project-links .project-button {
-        font-size: 0.8rem;
+    .footer-container {
+        flex-direction: row;
     }
 
-    .footer-bottom {
-        font-size: 0.8em;
+    .footer-about,
+    .footer-contact,
+    .footer-follow {
+        flex: 1 1 250px;
     }
 }
