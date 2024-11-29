@@ -288,6 +288,9 @@ main {
     /* Al principio el botón es invisible */
 }
 
+#scroll-top:hover {
+    background-color: #ff0066;
+}
 
 .project-button {
     display: inline-block;
