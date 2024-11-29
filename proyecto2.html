@@ -90,7 +90,8 @@
                         <pre>• Automatizar la creación de cuentas de usuario y grupos mediante scripts de PowerShell.</pre>
                     </li> <br>
                     <li>
-                        <strong>Configuración de Servidores de Archivos Compartidos y Políticas de Acceso Basado en Roles (RBAC):</strong>
+                        <strong>Configuración de Servidores de Archivos Compartidos y Políticas de Acceso Basado en
+                            Roles (RBAC):</strong>
                         <pre>• Configurar un servidor de archivos compartidos en Windows Server.</pre>
                         <pre>• Crear grupos de seguridad y asignar permisos a carpetas específicas basadas en roles y usuarios.</pre>
                         <pre>• Implementar políticas de copia de seguridad automatizadas para recursos compartidos.</pre>
@@ -109,7 +110,7 @@
                         <strong>Desplegar Copias de Seguridad Automatizadas:</strong>
                         <pre>• Programar tareas de copia de seguridad diarias que realicen backups completos e incrementales.</pre>
                         <pre>• Almacenar copias de seguridad en un dispositivo externo seguro o en la nube para facilitar la recuperación de datos en caso de desastre.</pre>
-                    </li> 
+                    </li>
                 </ul>
             </div>
         </article>
@@ -149,6 +150,22 @@
         </div>
     </footer>
 
+    <button id="scroll-top" style="display: none;">⬆</button>
+
+    <script>
+        const scrollTopButton = document.querySelector('#scroll-top');
+
+        // Mostrar/ocultar el botón al hacer scroll
+        window.addEventListener('scroll', () => {
+            scrollTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+
+        // Desplazamiento suave al inicio de la página
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
     <script src="archivo.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>

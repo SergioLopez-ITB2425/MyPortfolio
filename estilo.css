@@ -361,6 +361,19 @@ nav {
     padding: 20px;
 }
 
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff0066;
+    color: #fff; /* Color del texto */
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px; /* Asegura el tamaño del texto */
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
 /* prueba */
 
 /* Para pantallas pequeñas, como teléfonos */
