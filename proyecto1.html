@@ -7,6 +7,9 @@
     <title>Mi Proyecto - PortfolioSLR</title>
     <link rel="stylesheet" href="proyecto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" href="./img/PRUEBA123456789.ico">
+
 </head>
 
 <body>
@@ -129,19 +132,25 @@
         </div>
     </footer>
 
-    <button id="scroll-top" style="display: none;">⬆</button>
+    <button id="scroll-top">⬆</button>
 
     <script>
-        const scrollTopButton = document.querySelector('#scroll-top');
-
-        // Mostrar/ocultar el botón al hacer scroll
-        window.addEventListener('scroll', () => {
-            scrollTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+        // Función para hacer scroll suave hacia arriba
+        document.getElementById('scroll-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
-        // Desplazamiento suave al inicio de la página
-        scrollTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Función para mostrar u ocultar el botón según el scroll
+        window.addEventListener('scroll', function () {
+            let button = document.getElementById('scroll-top');
+            if (window.scrollY > 100) {
+                button.style.opacity = 1;  // Mostrar el botón
+            } else {
+                button.style.opacity = 0;  // Ocultar el botón
+            }
         });
     </script>
 
